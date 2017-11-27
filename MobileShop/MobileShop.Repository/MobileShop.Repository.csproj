@@ -5,11 +5,11 @@
     <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B606F195-B171-4F9C-BDB4-AFAEC6F11406}</ProjectGuid>
+    <ProjectGuid>{4146E3A5-21DD-4843-A2B6-6553AAD9D9B1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MobileShop.Domain</RootNamespace>
-    <AssemblyName>MobileShop.Domain</AssemblyName>
+    <RootNamespace>MobileShop.Repository</RootNamespace>
+    <AssemblyName>MobileShop.Repository</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -35,34 +35,15 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
-    <Folder Include="Dtos\Responses\" />
+    <ProjectReference Include="..\MobileShop.Domain\MobileShop.Domain.csproj">
+      <Project>{B606F195-B171-4F9C-BDB4-AFAEC6F11406}</Project>
+      <Name>MobileShop.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dtos\Banco.cs" />
-    <Compile Include="Dtos\Busqueda.cs" />
-    <Compile Include="Dtos\CalifiacionProducto.cs" />
-    <Compile Include="Dtos\Categoria.cs" />
-    <Compile Include="Dtos\Ciudad.cs" />
-    <Compile Include="Dtos\Cliente.cs" />
-    <Compile Include="Dtos\Departamento.cs" />
-    <Compile Include="Dtos\DetalleFactura.cs" />
-    <Compile Include="Dtos\Direccion.cs" />
-    <Compile Include="Dtos\EstadoPersona.cs" />
-    <Compile Include="Dtos\EstadoPublicacion.cs" />
-    <Compile Include="Dtos\Factura.cs" />
-    <Compile Include="Dtos\ImagenProducto.cs" />
-    <Compile Include="Dtos\MetodoPago.cs" />
-    <Compile Include="Dtos\ObjetoGenerico.cs" />
-    <Compile Include="Dtos\Pais.cs" />
-    <Compile Include="Dtos\Persona.cs" />
-    <Compile Include="Dtos\Producto.cs" />
-    <Compile Include="Dtos\Promocion.cs" />
-    <Compile Include="Dtos\Requests\User.cs" />
-    <Compile Include="Dtos\TipoIdentificacion.cs" />
-    <Compile Include="Dtos\UsoProducto.cs" />
-    <Compile Include="Dtos\Vendedor.cs" />
+    <Compile Include="AccountRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\IAccount.cs" />
+    <Compile Include="RepositoryBaseRest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
