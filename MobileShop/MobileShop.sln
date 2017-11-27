@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileShop.Repository", "Mo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileShop.Core", "MobileShop.Core\MobileShop.Core.csproj", "{7CB6006F-49BE-4497-A289-5B5C5722F140}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileShop.Droid", "MobileShop.Droid\MobileShop.Droid.csproj", "{3B7C4244-396A-4FBE-BFE5-DB61C3FDC160}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,12 @@ Global
 		{7CB6006F-49BE-4497-A289-5B5C5722F140}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CB6006F-49BE-4497-A289-5B5C5722F140}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CB6006F-49BE-4497-A289-5B5C5722F140}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B7C4244-396A-4FBE-BFE5-DB61C3FDC160}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B7C4244-396A-4FBE-BFE5-DB61C3FDC160}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B7C4244-396A-4FBE-BFE5-DB61C3FDC160}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3B7C4244-396A-4FBE-BFE5-DB61C3FDC160}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B7C4244-396A-4FBE-BFE5-DB61C3FDC160}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B7C4244-396A-4FBE-BFE5-DB61C3FDC160}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
