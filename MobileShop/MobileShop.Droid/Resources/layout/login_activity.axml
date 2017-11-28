@@ -1,7 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/content_top_padding"
+        android:paddingLeft="@dimen/login_left_padding"
+        android:paddingRight="@dimen/login_right_padding"
+        android:paddingBottom="@dimen/content_bottom_padding"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_shop"
+            android:layout_marginBottom="@dimen/content_bottom_padding" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:MvxBind="Text LblLoginHint" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/content_bottom_padding"
+            android:imeOptions="actionNext"
+            app:MvxBind="Text TxtLoginText; Hint TxtLoginHint" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:MvxBind="Text LblKeyHint" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/content_bottom_padding"
+            android:inputType="textPassword"
+            android:imeOptions="actionDone"
+            app:MvxBind="Text TxtPasswordText; Hint TxtKeyHint"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginBottom="@dimen/content_bottom_padding"
+            app:MvxBind="Text BtnLoginText" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/content_bottom_padding"
+            app:MvxBind="Text LblForgotKey"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/content_bottom_padding"
+            app:MvxBind="Text LblSignUp; Click SignupCommand"/>
+    </LinearLayout>
+</ScrollView>

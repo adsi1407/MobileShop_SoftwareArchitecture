@@ -10,9 +10,9 @@ namespace MobileShop.Droid.Views
     {
         #region Properties
 
-        public new LoginViewModel ViewModel
+        public new SignUpViewModel ViewModel
         {
-            get { return (LoginViewModel)base.ViewModel; }
+            get { return (SignUpViewModel)base.ViewModel; }
             set { base.ViewModel = value; }
         }
 
@@ -22,6 +22,7 @@ namespace MobileShop.Droid.Views
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.signup_activity);
+            Title = ViewModel.ScreenTitle;
         }
     }
 }

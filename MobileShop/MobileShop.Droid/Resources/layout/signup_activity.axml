@@ -1,7 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-</LinearLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:paddingTop="@dimen/content_top_padding"
+      android:paddingLeft="@dimen/login_left_padding"
+      android:paddingRight="@dimen/login_right_padding"
+      android:paddingBottom="@dimen/content_bottom_padding"
+      android:focusable="true"
+      android:focusableInTouchMode="true">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/content_bottom_padding"
+        android:textStyle="bold"
+        app:MvxBind="Text Greeting" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:MvxBind="Text IdTypeLabel" />
+    <MvxSpinner
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginBottom="@dimen/content_bottom_padding"
+        app:MvxBind="ItemsSource IdTypes; SelectedItem SelectedIdType"
+        app:MvxItemTemplate="@drawable/generic_item"
+        app:MvxDropDownItemTemplate="@drawable/generic_drop_down_item" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:MvxBind="Text IdLabel" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/content_bottom_padding"
+        android:imeOptions="actionNext"
+        app:MvxBind="Text IdText; Hint IdHint" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:MvxBind="Text NameLabel" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/content_bottom_padding"
+        android:inputType="textCapWords"
+        android:imeOptions="actionNext"
+        app:MvxBind="Text NameText; Hint NameHint"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:MvxBind="Text PhoneLabel" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/content_bottom_padding"
+        android:inputType="phone"
+        android:imeOptions="actionNext"
+        app:MvxBind="Text PhoneText; Hint PhoneHint"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:MvxBind="Text EmailLabel" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/content_bottom_padding"
+        android:inputType="textEmailAddress"
+        android:imeOptions="actionDone"
+        app:MvxBind="Text EmailText; Hint EmailHint"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginBottom="@dimen/content_bottom_padding"
+        app:MvxBind="Text BtnSigupText" />
+  </LinearLayout>
+</ScrollView>
