@@ -12,12 +12,7 @@ namespace MobileShop.Repository
             throw new NotImplementedException();
         }
 
-        public Task<bool> RegisterClient(Cliente cliente)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<bool> RegisterSeller(Vendedor vendedor)
+        public Task<bool> Register(Persona persona)
         {
             throw new NotImplementedException();
         }
