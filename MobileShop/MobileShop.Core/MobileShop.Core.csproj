@@ -39,6 +39,10 @@
       <Project>{B606F195-B171-4F9C-BDB4-AFAEC6F11406}</Project>
       <Name>MobileShop.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MobileShop.Repository\MobileShop.Repository.csproj">
+      <Project>{4146E3A5-21DD-4843-A2B6-6553AAD9D9B1}</Project>
+      <Name>MobileShop.Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
