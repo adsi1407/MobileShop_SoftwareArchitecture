@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace MobileShop.Domain.Repositories
 {
-    public interface IAccount
+    public interface IAccountRepository
     {
         Task<bool> Register(Persona persona);
 

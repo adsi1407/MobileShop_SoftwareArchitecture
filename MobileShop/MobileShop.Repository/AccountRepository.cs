@@ -5,7 +5,7 @@ using MobileShop.Domain.Repositories;
 
 namespace MobileShop.Repository
 {
-    public class AccountRepository : IAccount
+    public class AccountRepository : IAccountRepository
     {
         public Task<bool> Login(User user)
         {
