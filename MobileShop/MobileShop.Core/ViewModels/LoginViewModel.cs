@@ -7,18 +7,45 @@ namespace MobileShop.Core.ViewModels
     {
         #region Private Vars
 
+        private string lblLoginHint;
         private string txtLoginText;
         private string txtLoginHint;
+        private string lblKeyHint;
         private string txtPasswordText;
-        private string txtPasswordHint;
+        private string txtKeyHint;
         private string btnLoginText;
-        private string lblForgotPassword;
-        private string lblDontHaveAccount;
+        private string lblForgotKey;
         private string lblSignUp;
 
         #endregion
 
+        #region Construction
+
+        public LoginViewModel()
+        {
+            ScreenTitle = "Login";
+            LblLoginHint = "Ingresa tu usuario";
+            TxtLoginHint = "Email";
+            LblKeyHint = "Ingresa tu clave";
+            TxtKeyHint = "Clave";
+            BtnLoginText = "Entrar";
+            LblForgotKey = "¡Olvidé mi clave!";
+            LblSignUp = "Registrarme";
+        }
+
+        #endregion
+
         #region Properties
+
+        public string LblLoginHint
+        {
+            get { return lblLoginHint; }
+            set
+            {
+                lblLoginHint = value;
+                RaisePropertyChanged(() => LblLoginHint);
+            }
+        }
 
         public string TxtLoginText
         {
@@ -40,6 +67,16 @@ namespace MobileShop.Core.ViewModels
             }
         }
 
+        public string LblKeyHint
+        {
+            get { return lblKeyHint; }
+            set
+            {
+                lblKeyHint = value;
+                RaisePropertyChanged(() => LblKeyHint);
+            }
+        }
+
         public string TxtPasswordText
         {
             get { return txtPasswordText; }
@@ -50,13 +87,13 @@ namespace MobileShop.Core.ViewModels
             }
         }
 
-        public string TxtPasswordHint
+        public string TxtKeyHint
         {
-            get { return txtPasswordHint; }
+            get { return txtKeyHint; }
             set
             {
-                txtPasswordHint = value;
-                RaisePropertyChanged(() => TxtPasswordHint);
+                txtKeyHint = value;
+                RaisePropertyChanged(() => TxtKeyHint);
             }
         }
 
@@ -70,23 +107,13 @@ namespace MobileShop.Core.ViewModels
             }
         }
 
-        public string LblForgotPassword
+        public string LblForgotKey
         {
-            get { return lblForgotPassword; }
+            get { return lblForgotKey; }
             set
             {
-                lblForgotPassword = value;
-                RaisePropertyChanged(() => LblForgotPassword);
-            }
-        }
-
-        public string LblDontHaveAccount
-        {
-            get { return lblDontHaveAccount; }
-            set
-            {
-                lblDontHaveAccount = value;
-                RaisePropertyChanged(() => LblDontHaveAccount);
+                lblForgotKey = value;
+                RaisePropertyChanged(() => LblForgotKey);
             }
         }
 
@@ -104,7 +131,7 @@ namespace MobileShop.Core.ViewModels
 
         #region Commands
 
-        public ICommand SignUpCommand
+        public ICommand SignupCommand
         {
             get
             {

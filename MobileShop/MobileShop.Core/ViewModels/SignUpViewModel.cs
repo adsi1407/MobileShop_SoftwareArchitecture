@@ -1,5 +1,6 @@
 ﻿using MobileShop.Domain.Dtos;
 using MvvmCross.Core.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Windows.Input;
 
@@ -9,6 +10,7 @@ namespace MobileShop.Core.ViewModels
     {
         #region Private Vars
 
+        private string greeting;
         private string idTypeLabel;
         private List<TipoIdentificacion> idTypes;
         private TipoIdentificacion selectedIdType;
@@ -24,15 +26,47 @@ namespace MobileShop.Core.ViewModels
         private string emailLabel;
         private string emailHint;
         private string emailText;
-        private string userTypeLabel;
-        private string userTypeClientText;
-        private string userTypeSellerText;
-        private int selectedUserType;
         private string btnSigupText;
 
         #endregion
 
+        #region Construction
+
+        public SignUpViewModel()
+        {
+            ScreenTitle = "Registro";
+            Greeting = "Hola, Regístrate en nuestra tienda";
+            IdTypeLabel = "Seleccciona el tipo de documento";
+            IdLabel = "Número de documento";
+            IdHint = "Documento";
+            NameLabel = "Ingresa tu nombre";
+            NameHint = "Nombre";
+            PhoneLabel = "Ingresa el número de teléfono";
+            PhoneHint = "Teléfono";
+            EmailLabel = "Ingresa tu email";
+            EmailHint = "Email";
+            BtnSigupText = "Terminar";
+
+            IdTypes = new List<TipoIdentificacion>
+            {
+                new TipoIdentificacion { Id = "CC", Nombre = "Cédula de ciudadanía" },
+                new TipoIdentificacion { Id = "CE", Nombre = "Cédula de extranjería" }
+            };
+        }
+
+        #endregion
+
         #region Properties
+
+        public string Greeting
+        {
+            get { return greeting; }
+            set
+            {
+                greeting = value;
+                RaisePropertyChanged(() => Greeting);
+            }
+        }
 
         public string IdTypeLabel
         {
@@ -180,46 +214,7 @@ namespace MobileShop.Core.ViewModels
                 RaisePropertyChanged(() => EmailText);
             }
         }
-
-        public string UserTypeLabel
-        {
-            get { return userTypeLabel; }
-            set
-            {
-                userTypeLabel = value;
-                RaisePropertyChanged(() => UserTypeLabel);
-            }
-        }
-
-        public string UserTypeClientText
-        {
-            get { return userTypeClientText; }
-            set
-            {
-                userTypeClientText = value;
-                RaisePropertyChanged(() => UserTypeClientText);
-            }
-        }
-
-        public string UserTypeSellerText
-        {
-            get { return userTypeSellerText; }
-            set
-            {
-                userTypeSellerText = value;
-                RaisePropertyChanged(() => UserTypeSellerText);
-            }
-        }
-
-        public int SelectedUserType
-        {
-            get { return selectedUserType; }
-            set
-            {
-                selectedUserType = value;
-                RaisePropertyChanged(() => SelectedUserType);
-            }
-        }
+        
         public string BtnSigupText
         {
             get { return btnSigupText; }
@@ -229,7 +224,6 @@ namespace MobileShop.Core.ViewModels
                 RaisePropertyChanged(() => BtnSigupText);
             }
         }
-
 
         #endregion
 
@@ -249,6 +243,7 @@ namespace MobileShop.Core.ViewModels
 
         private void SignupUserCommand()
         {
+            throw new NotImplementedException();
         }
 
         #endregion
